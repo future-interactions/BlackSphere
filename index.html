@@ -13,15 +13,37 @@
 </head>
 
 <body>
-  <script src="js/three.js"></script>
-  <script>
+  <!-- <script type="module" src="./js/three.js"></script> 
+  <script type= "module" src="https://threejs.org/build/three.module.js"></script>  
+  <script type="module" src="./js/OrbitControls.js">
+  </script> -->
+
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./js/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+
+    import * as THREE from 'three';
+
+
+    import { OrbitControls } from './js/OrbitControls.js';
+
+
     const cW = window.innerWidth;
     const cH = window.innerWidth;
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, cW / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+    const renderer = new THREE.WebGLRenderer();
+    const controls = new OrbitControls(camera, renderer.domElement)
     const pt = new THREE.Vector3(0, -0.2, -1);
     camera.lookAt(pt);
-    const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
     const light = new THREE.PointLight(0xffffff, 5, 100);
