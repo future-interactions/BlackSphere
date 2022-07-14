@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My first three.js app</title>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="js/three.js"></script>
+  <script>
+    const cW = window.innerWidth;
+    const cH = window.innerWidth;
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, cW / window.innerHeight, 0.1, 1000);
+    const pt = new THREE.Vector3(0, -0.2, -1);
+    camera.lookAt(pt);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+    const light = new THREE.PointLight(0xffffff, 5, 100);
+    light.position.set(50, 50, 50);
+    scene.add(light);
+    const size = cW / 10;
+    const divisions = 30;
+
+    const gridHelper = new THREE.GridHelper(size, divisions, 0x222222, 0x222222);
+    scene.add(gridHelper);
+    const geometry = new THREE.SphereGeometry(1, 12, 6);
+    const materialW = new THREE.MeshPhongMaterial({
+      wireframe: true
+    });
+    // const material = new THREE.MeshBasicMaterial({
+    //   color: 0x000000
+    // });
+    const material = new THREE.MeshPhongMaterial({
+      color: 0x000000, // red (can also use a CSS color string here)
+      //shininess: 300,
+    });
+    const sphere = new THREE.Mesh(geometry, material);
+    const sphereW = new THREE.Mesh(geometry, materialW);
+    scene.add(sphere);
+    scene.add(sphereW);
+    //sphereW.position.x=1;
+    gridHelper.position.y = -5;
+    camera.position.z = 5;
+    camera.aspect = cW / cH;
+
+
+    window.addEventListener('resize', onWindowResize);
+
+    function onWindowResize() {
+
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      sphere.rotation.x += 0.005;
+      sphere.rotation.y += 0.005;
+      sphereW.rotation.x += 0.005;
+      sphereW.rotation.y += 0.005;
+      renderer.render(scene, camera);
+    };
+
+    animate();
+  </script>
+</body>
+
+</html>
