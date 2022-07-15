@@ -14,13 +14,15 @@
 
 <body>
   <script src="js/three.js">
-  <script type="module" src="https://threejs.org/build/three.module.js">
-  <script type="module" src="./js/OrbitControls.js">
-
+    < script type = "module"
+    src = "https://threejs.org/build/three.module.js" >
+      <
+      script type = "module"
+    src = "./js/OrbitControls.js" >
   </script>
 
 
-    <script type="importmap">
+  <script type="importmap">
     {
       "imports": {
         "three": "./js/three.module.js"
@@ -30,9 +32,7 @@
 
   <script type="module">
 
-    import * as THREE from 'three';
-
-    import { OrbitControls } from './js/OrbitControls.js';
+    // import { OrbitControls } from './js/OrbitControls.js';
 
 
     const cW = window.innerWidth;
@@ -71,7 +71,7 @@
     scene.add(sphereW);
     //sphereW.position.x=1;
     gridHelper.position.y = -5;
-    camera.position.z = 5;
+    camera.position.z = 50;
     camera.aspect = cW / cH;
 
 
