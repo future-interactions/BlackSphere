@@ -13,13 +13,14 @@
 </head>
 
 <body>
-  <!-- <script type="module" src="./js/three.js"></script> 
-  <script type= "module" src="https://threejs.org/build/three.module.js"></script>  
+  <script src="js/three.js">
+  <script type="module" src="https://threejs.org/build/three.module.js">
   <script type="module" src="./js/OrbitControls.js">
-  </script> -->
+
+  </script>
 
 
-  <script type="importmap">
+    <script type="importmap">
     {
       "imports": {
         "three": "./js/three.module.js"
@@ -31,8 +32,7 @@
 
     import * as THREE from 'three';
 
-
-    //import { OrbitControls } from './js/OrbitControls.js';
+    import { OrbitControls } from './js/OrbitControls.js';
 
 
     const cW = window.innerWidth;
