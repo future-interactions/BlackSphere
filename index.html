@@ -16,8 +16,7 @@
   <script src="js/three.js">
     < script type = "module"
     src = "https://threejs.org/build/three.module.js" >
-      <
-      script type = "module"
+      <script type = "module"
     src = "./js/OrbitControls.js" >
   </script>
 
@@ -32,7 +31,7 @@
 
   <script type="module">
 
-    // import { OrbitControls } from './js/OrbitControls.js';
+    import { OrbitControls } from './js/OrbitControls.js';
 
 
     const cW = window.innerWidth;
@@ -41,7 +40,7 @@
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
     const renderer = new THREE.WebGLRenderer();
-    //const controls = new OrbitControls(camera, renderer.domElement)
+    const controls = new OrbitControls(camera, renderer.domElement)
     const pt = new THREE.Vector3(0, -0.2, -1);
     camera.lookAt(pt);
     renderer.setSize(window.innerWidth, window.innerHeight);
