@@ -75,25 +75,25 @@
     camera.aspect = cW / cH;
 
 
-    window.addEventListener('resize', onWindowResize);
+    // window.addEventListener('resize', onWindowResize);
 
-    function onWindowResize() {
+    // function onWindowResize() {
 
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
+    //   camera.aspect = window.innerWidth / window.innerHeight;
+    //   camera.updateProjectionMatrix();
 
-      renderer.setSize(window.innerWidth, window.innerHeight);
+    //   renderer.setSize(window.innerWidth, window.innerHeight);
 
-    }
+    // }
 
-    function animate() {
-      requestAnimationFrame(animate);
-      sphere.rotation.x += 0.005;
-      sphere.rotation.y += 0.005;
-      sphereW.rotation.x += 0.005;
-      sphereW.rotation.y += 0.005;
-      renderer.render(scene, camera);
-    };
+    // function animate() {
+    //   requestAnimationFrame(animate);
+    //   sphere.rotation.x += 0.005;
+    //   sphere.rotation.y += 0.005;
+    //   sphereW.rotation.x += 0.005;
+    //   sphereW.rotation.y += 0.005;
+    //   renderer.render(scene, camera);
+    // };
 
     animate();
   </script>
