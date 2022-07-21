@@ -86,14 +86,14 @@
 
     // }
 
-    // function animate() {
-    //   requestAnimationFrame(animate);
-    //   sphere.rotation.x += 0.005;
-    //   sphere.rotation.y += 0.005;
-    //   sphereW.rotation.x += 0.005;
-    //   sphereW.rotation.y += 0.005;
-    //   renderer.render(scene, camera);
-    // };
+    function animate() {
+      requestAnimationFrame(animate);
+      sphere.rotation.x += 0.005;
+      sphere.rotation.y += 0.005;
+      sphereW.rotation.x += 0.005;
+      sphereW.rotation.y += 0.005;
+      renderer.render(scene, camera);
+    };
 
     animate();
   </script>
