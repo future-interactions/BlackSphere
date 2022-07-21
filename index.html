@@ -13,24 +13,10 @@
 </head>
 
 <body>
-  <script src="./js/three.js">
-    //  < script type = "module"
-    //  src = "https://threejs.org/build/three.module.js" >
-    <script src = "./js/OrbitControls.js" >
-  </script>
+	<script src="https://threejs.org/build/three.js"></script>
+	<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
 
-
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "./js/three.module.js"
-      }
-    }
-  </script>
-
-  <script type="module">
-
-    import { OrbitControls } from './js/OrbitControls.js';
+  <script>
 
 
     const cW = window.innerWidth;
@@ -39,7 +25,7 @@
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
     const renderer = new THREE.WebGLRenderer();
-    const controls = new OrbitControls(camera, renderer.domElement)
+    const controls = new THREE.OrbitControls(camera, renderer.domElement)
     const pt = new THREE.Vector3(0, -0.2, -1);
     camera.lookAt(pt);
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -52,22 +38,23 @@
 
     const gridHelper = new THREE.GridHelper(size, divisions, 0xff0000, 0xcccccc);
     scene.add(gridHelper);
-    const geometry = new THREE.SphereGeometry(1, 12, 6);
-    const materialW = new THREE.MeshPhongMaterial({
+    const geometry = new THREE.SphereGeometry(5, 12, 6);
+    const materialW = new THREE.MeshBasicMaterial({
+      color: 0x0000ff, 
+
       wireframe: true
     });
     // const material = new THREE.MeshBasicMaterial({
     //   color: 0x000000
     // });
-    const material = new THREE.MeshPhongMaterial({
-      color: 0x000000, // red (can also use a CSS color string here)
-      //shininess: 300,
+    const material = new THREE.MeshBasicMaterial({
+      color: 0xfffeed, 
     });
     const sphere = new THREE.Mesh(geometry, material);
     const sphereW = new THREE.Mesh(geometry, materialW);
     scene.add(sphere);
     scene.add(sphereW);
-    scene.fog = new THREE.Fog(0xfffeed, 10, 150);
+    scene.fog = new THREE.Fog(0xfffeed, 10, 100);
     scene.background = new THREE.Color(0xfffeed);
     //sphereW.position.x=1;
     gridHelper.position.y = -5;
@@ -75,16 +62,16 @@
     camera.aspect = cW / cH;
 
 
-    // window.addEventListener('resize', onWindowResize);
+    window.addEventListener('resize', onWindowResize);
 
-    // function onWindowResize() {
+    function onWindowResize() {
 
-    //   camera.aspect = window.innerWidth / window.innerHeight;
-    //   camera.updateProjectionMatrix();
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
 
-    //   renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(window.innerWidth, window.innerHeight);
 
-    // }
+    }
 
     function animate() {
       requestAnimationFrame(animate);
