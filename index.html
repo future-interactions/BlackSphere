@@ -53,6 +53,15 @@
 
 
     @media (orientation: landscape) {
+      div.logo {
+        position: relative;
+        left: 40px;
+        top: 40px;
+        width: 20%;
+        min-width: 200px;
+        max-width: 800px;
+      }
+
       div.intro {
         position: relative;
         font-family: Inter, sans-serif;
@@ -65,14 +74,17 @@
         width: 85%;
       }
 
-      div.logo {
+      div.copy {
         position: relative;
+        font-family: 'DM Mono', sans-serif;
+        font-size: 1.6em;
+        letter-spacing: -0.05em;
+        color: #000;
         left: 40px;
-        top: 40px;
-        width: 20%;
-        min-width: 200px;
-        max-width: 800px;
+        top: 110px;
+        width: 60%;
       }
+
     }
 
     @media (orientation: portrait) {
@@ -94,15 +106,23 @@
         color: #000;
         left: 40px;
         top: 80px;
-
         width: 85%;
         min-width: 600px;
-
+      }
+      div.copy {
+        position: relative;
+        font-family: 'DM Mono', sans-serif;
+        font-size: 1.6em;
+        letter-spacing: -0.05em;
+        color: #000;
+        left: 40px;
+        top: 110px;
+        width: 60%;
       }
     }
   </style>
- 
-</style>
+
+  </style>
 </head>
 
 <body>
@@ -189,6 +209,16 @@
   <div class="intro">
     The Office of Future Interactions is an inquiry led design & innovation studio.
   </div>
+  <div class="copy">
+    We specialize in the interpretation of shifting social, cultural and environmental patterns; deep expertise in
+    emerging technology; and designing and assessing the implications of speculative near-future experiences — so that
+    we can create meaningful and tangible opportunities for our partners.
+    </BR> </BR>
+    If you’d like to hear more about how we work or discuss working with us please contact:
+    </BR> </BR>
+    enquiries@future-interactions.com
+  </div>
+
 </body>
 
 </html>
