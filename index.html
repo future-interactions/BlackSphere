@@ -16,56 +16,98 @@
   </script>
   <style>
     body {
+      pointer-events: none;
       margin: 0;
       background-color: #fffeed;
     }
   </style>
   <style>
-    div.threeCanvas {
-      position: absolute;
-      top: 1000;
-    }
-
     div.logo {
-      position: absolute;
+      position: relative;
       left: 40px;
       top: 40px;
-      pointer-events: none;
+
       width: 38.2%;
       min-width: 400px;
       max-width: 800px;
     }
 
     div.intro {
-      position: absolute;
+      position: relative;
       font-family: Inter, sans-serif;
       font-size: 5em;
       letter-spacing: -0.05em;
       color: #000;
       left: 40px;
-      top: 250px;
-      pointer-events: none;
+      top: 80px;
+
       width: 85%;
       min-width: 600px;
 
     }
-    @media (orientation: landscape) {
-  body {
-    background-color: #faed00;
-  }
-}
 
-@media (orientation: portrait) {
-  body {
-    background-color: #f3045f;
-  }
-}
+    canvas {
+      position: absolute;
+      pointer-events: auto;
+    }
+
+
+
+    @media (orientation: landscape) {
+      div.intro {
+        position: relative;
+        font-family: Inter, sans-serif;
+        font-size: 3.5em;
+        letter-spacing: -0.05em;
+        color: #000;
+        left: 40px;
+        top: 80px;
+
+        width: 85%;
+        /* min-width: 600px; */
+      }
+
+      div.logo {
+        position: relative;
+        left: 40px;
+        top: 40px;
+        width: 38.2%;
+        min-width: 400px;
+        max-width: 800px;
+      }
+    }
+
+    @media (orientation: portrait) {
+      div.logo {
+      position: relative;
+      left: 40px;
+      top: 40px;
+
+      width: 38.2%;
+      min-width: 400px;
+      max-width: 800px;
+    }
+
+    div.intro {
+      position: relative;
+      font-family: Inter, sans-serif;
+      font-size: 4em;
+      letter-spacing: -0.05em;
+      color: #000;
+      left: 40px;
+      top: 80px;
+
+      width: 85%;
+      min-width: 600px;
+
+    }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="threeCanvas">
+  <div>
     <script src="https://threejs.org/build/three.js"></script>
     <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
 
