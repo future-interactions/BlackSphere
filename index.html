@@ -4,6 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>FI08: BlackSphere</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+
+
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["DM Sans:regular,500,700", "Inter:regular", "DM Mono:regular"]
+      }
+    });
+  </script>
   <style>
     body {
       margin: 0;
@@ -13,18 +23,34 @@
   <style>
     div.logo {
       position: absolute;
-      left: 10px;
-      top: 10px;
+      left: 20px;
+      top: 20px;
       pointer-events: none;
-      width: 50%;
-      min-width: 400px;
+      width: 38.2%;
+    
+    }
+
+    div.intro {
+      position: absolute;
+      font-family: Inter, sans-serif;
+      font-size: 5em;
+      letter-spacing: -0.05em;
+      color: #000;
+      left: 20px;
+      top: 170px;
+      pointer-events: none;
+      width: 75%;
+     
     }
   </style>
 </head>
 
 <body>
   <div class="logo">
-    <img src="./assets/toofi_logo_b&w.svg" alt="The Office of Future Interactions Logo">
+    <img src="./assets/toofi_logo_trim.svg" alt="The Office of Future Interactions Logo">
+  </div>
+  <div class="intro">
+    The Office of Future Interactions is an inquiry led design & innovation studio.
   </div>
   <script src="https://threejs.org/build/three.js"></script>
   <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
@@ -35,10 +61,12 @@
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({
+      alpha: true
+    });
     const controls = new THREE.OrbitControls(camera, renderer.domElement)
     const pt = new THREE.Vector3(0, -1, -1);
-   
+
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
     const light = new THREE.PointLight(0xffffff, 5, 50);
@@ -68,7 +96,7 @@
     sphere.position.y = 2;
     sphereW.position.y = 2;
     scene.fog = new THREE.Fog(0xfffeed, 0.1, 60);
-    scene.background = new THREE.Color(0xfffeed);
+    //scene.background = new THREE.Color(0xfffeed);
     //sphereW.position.x=1;
     gridHelper.position.y = -3;
     camera.position.z = -10;
