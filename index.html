@@ -10,15 +10,26 @@
       background-color: #fffeed;
     }
   </style>
+  <style>
+    div.logo {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      pointer-events: none;
+      width: 50%;
+      min-width: 200px;
+    }
+  </style>
 </head>
 
 <body>
-	<script src="https://threejs.org/build/three.js"></script>
-	<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+  <div class="logo">
+    <img src="./assets/toofi_logo_b&w.svg" alt="The Office of Future Interactions Logo">
+  </div>
+  <script src="https://threejs.org/build/three.js"></script>
+  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
 
   <script>
-
-
     const cW = window.innerWidth;
     const cH = window.innerWidth;
     const scene = new THREE.Scene();
@@ -26,21 +37,21 @@
 
     const renderer = new THREE.WebGLRenderer();
     const controls = new THREE.OrbitControls(camera, renderer.domElement)
-    const pt = new THREE.Vector3(0, -0.2, -1);
-    camera.lookAt(pt);
+    const pt = new THREE.Vector3(0, -1, -1);
+   
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
     const light = new THREE.PointLight(0xffffff, 5, 50);
     light.position.set(50, 50, 50);
     scene.add(light);
     const size = cW / 5;
-    const divisions = 60;
+    const divisions = 100;
 
     const gridHelper = new THREE.GridHelper(size, divisions, 0xff0000, 0xcccccc);
     scene.add(gridHelper);
     const geometry = new THREE.SphereGeometry(5, 12, 6);
     const materialW = new THREE.MeshBasicMaterial({
-      color: 0x0000ff, 
+      color: 0x0000ff,
 
       wireframe: true
     });
@@ -48,17 +59,19 @@
     //   color: 0x000000
     // });
     const material = new THREE.MeshBasicMaterial({
-      color: 0xfffeed, 
+      color: 0xfffeed,
     });
     const sphere = new THREE.Mesh(geometry, material);
     const sphereW = new THREE.Mesh(geometry, materialW);
-    scene.add(sphere);
-    scene.add(sphereW);
-    scene.fog = new THREE.Fog(0xfffeed, 10, 100);
+    //scene.add(sphere);
+    // scene.add(sphereW);
+    sphere.position.y = 2;
+    sphereW.position.y = 2;
+    scene.fog = new THREE.Fog(0xfffeed, 0.1, 30);
     scene.background = new THREE.Color(0xfffeed);
     //sphereW.position.x=1;
-    gridHelper.position.y = -5;
-    camera.position.z = 50;
+    gridHelper.position.y = -3;
+    camera.position.z = -10;
     camera.aspect = cW / cH;
 
 
@@ -75,6 +88,7 @@
 
     function animate() {
       requestAnimationFrame(animate);
+      camera.lookAt(pt);
       sphere.rotation.x += 0.005;
       sphere.rotation.y += 0.005;
       sphereW.rotation.x += 0.005;
@@ -84,6 +98,7 @@
 
     animate();
   </script>
+
 </body>
 
 </html>
