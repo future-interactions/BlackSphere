@@ -52,7 +52,6 @@
     }
 
 
-
     @media (orientation: landscape) {
       div.intro {
         position: relative;
@@ -79,30 +78,35 @@
 
     @media (orientation: portrait) {
       div.logo {
-      position: relative;
-      left: 40px;
-      top: 40px;
+        position: relative;
+        left: 40px;
+        top: 40px;
 
-      width: 38.2%;
-      min-width: 400px;
-      max-width: 800px;
-    }
+        width: 38.2%;
+        min-width: 400px;
+        max-width: 800px;
+      }
 
-    div.intro {
-      position: relative;
-      font-family: Inter, sans-serif;
-      font-size: 4em;
-      letter-spacing: -0.05em;
-      color: #000;
-      left: 40px;
-      top: 80px;
+      div.intro {
+        position: relative;
+        font-family: Inter, sans-serif;
+        font-size: 4em;
+        letter-spacing: -0.05em;
+        color: #000;
+        left: 40px;
+        top: 80px;
 
-      width: 85%;
-      min-width: 600px;
+        width: 85%;
+        min-width: 600px;
 
-    }
+      }
     }
   </style>
+  <style>
+  window.onresize = () => {
+    location.reload();
+  }
+</style>
 </head>
 
 <body>
