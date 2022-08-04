@@ -22,8 +22,6 @@
     }
   </style>
   <style>
-   
-
     canvas {
       position: absolute;
       pointer-events: auto;
@@ -41,28 +39,41 @@
         max-width: 300px;
       }
 
+      div.key {
+        position: absolute;
+        left: 93.5%;
+        top: 40px;
+        width: 0.8%;
+      }
+
+      div.mail {
+        position: absolute;
+        left: 95%;
+        top: 43px;
+        width: 1.5%;
+      }
 
 
       div.intro {
         position: relative;
         font-family: Inter, sans-serif;
-        font-size: 3.5em;
+        font-size: 2.5em;
         letter-spacing: -0.05em;
         color: #000;
         left: 40px;
         top: 60px;
         min-width: 200px;
-        max-width: 700px;
+        max-width: 500px;
       }
 
       div.copy {
         position: relative;
         font-family: 'DM Mono', sans-serif;
-        font-size: 1.3em;
+        font-size: 1em;
         letter-spacing: -0.05em;
         color: #000;
-        left: 740px;
-        top: -70px;
+        left: 540px;
+        top: -30px;
         min-width: 200px;
         max-width: 600px;
 
@@ -75,12 +86,21 @@
         letter-spacing: -0.05em;
         color: #333;
         left: 40px;
-        top: -20px;
+        
         min-width: 200px;
         max-width: 500px;
 
       }
+      div.rule {
+        position: relative;
 
+        color: rgb(0, 0, 0);
+       left: 40px;
+      max-width: 95%;
+       
+    
+
+      }
     }
 
     @media (orientation: portrait) {
@@ -120,15 +140,17 @@
       div.footer {
         position: relative;
         font-family: 'DM Mono', sans-serif;
-        font-size: 1.8em;
+        font-size: 1.7em;
         letter-spacing: -0.05em;
         color: #333;
         left: 40px;
-        top: 120px;
+        top: 140px;
         width: 85%;
         min-width: 600px;
 
       }
+
+    
     }
   </style>
 
@@ -225,16 +247,28 @@
     technology and shifting socio-cultural patterns, and model tangible near future scenarios to learn about the
     implications of new forms of interaction and behaviour.
     </BR> </BR>
-    Our work has helped world leading education, arts & cultural, media and sports organisations get ahead and place more assured
+    Our work has helped world leading education, arts & cultural, media and sports organisations get ahead and place
+    more assured
     bets on the future.
 
 
   </div>
+  </div>
+  <div class="rule">
+    <HR>
+  </div>
+
   <div class="footer">
     © 2022 The Office of Future Interactions Ltd <BR>
     Registered Number: 13611734. Registered in England & Wales.
 
 
+  </div>
+  <div class="key">
+    <img src="./assets/key.svg" alt="The Office of Future Interactions Vault">
+  </div>
+  <div class="mail">
+    <img src="./assets/mail.svg" alt="The Office of Future Interactions Contact">
   </div>
 </body>
 
