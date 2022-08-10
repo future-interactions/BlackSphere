@@ -59,13 +59,13 @@
       .introMob {
         position: relative;
         font-family: Inter, sans-serif;
-        font-size: 4em;
+        font-size: 1.5em;
         letter-spacing: -0.05em;
-        color: #ff0000;
+        color: #000;
         left: 40px;
-        top: 80px;
-        width: 85%;
-        min-width: 600px;
+        top: 60px;
+        min-width: 200px;
+        max-width: 400px;
       }
 
       div.copy {
@@ -75,6 +75,19 @@
         letter-spacing: -0.05em;
         color: #000;
         left: 540px;
+        top: -30px;
+        min-width: 200px;
+        max-width: 600px;
+
+      }
+
+      div.copyMob {
+        position: relative;
+        font-family: 'DM Mono', sans-serif;
+        font-size: 1em;
+        letter-spacing: -0.05em;
+        color: #000;
+        left: 440px;
         top: -30px;
         min-width: 200px;
         max-width: 600px;
@@ -166,12 +179,10 @@
 
       div.rule {
         position: relative;
-
         color: rgb(0, 0, 0);
         left: 40px;
         max-width: 90%;
         top: 140px;
-
       }
   </style>
 
@@ -206,27 +217,10 @@
 
       const gridHelper = new THREE.GridHelper(size, divisions, 0xff0000, 0xcccccc);
       scene.add(gridHelper);
-      const geometry = new THREE.SphereGeometry(5, 12, 6);
-      const materialW = new THREE.MeshBasicMaterial({
-        color: 0x0000ff,
 
-        wireframe: true
-      });
-      /* const material = new THREE.MeshBasicMaterial({ */
-      //   color: 0x000000
-      // });
-      const material = new THREE.MeshBasicMaterial({
-        color: 0xfffeed,
-      });
-      const sphere = new THREE.Mesh(geometry, material);
-      const sphereW = new THREE.Mesh(geometry, materialW);
-      //scene.add(sphere);
-      // scene.add(sphereW);
-      sphere.position.y = 2;
-      sphereW.position.y = 2;
+
+
       scene.fog = new THREE.Fog(0xfffeed, 0.1, 60);
-      //scene.background = new THREE.Color(0xfffeed);
-      //sphereW.position.x=1;
       gridHelper.position.y = -3;
       camera.position.z = -10;
       camera.aspect = cW / cH;
@@ -246,10 +240,6 @@
       function animate() {
         requestAnimationFrame(animate);
         camera.lookAt(pt);
-        sphere.rotation.x += 0.005;
-        sphere.rotation.y += 0.005;
-        sphereW.rotation.x += 0.005;
-        sphereW.rotation.y += 0.005;
         renderer.render(scene, camera);
       };
 
@@ -263,35 +253,27 @@
   <div id="strapline" class="intro">
     A making and inquiry led design & innovation studio.
   </div>
-  <div class="copy">
+  <div id="copyMain" class="copy">
     We map complex relationships to understand how action is produced on the ground, predict change based on emerging
     technology and shifting socio-cultural patterns, and model tangible near future scenarios to learn about the
     implications of new forms of interaction and behaviour.
     </BR> </BR>
-    Our work has helped world leading education, arts & cultural, media and sports organisations get ahead and place
-    more assured
-    bets on the future.
-
-
-  </div>
+    Due to the highly confidential nature of our work we are unable to share the details of any of our past or current
+    projects.
   </div>
   <div class="rule">
     <HR>
   </div>
-
   <div class="footer">
     © 2022 The Office of Future Interactions Ltd <BR>
     Registered Number: 13611734. Registered in England & Wales.
-
-
   </div>
 
 </body>
 <script>
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     document.getElementById('strapline').setAttribute('class', 'introMob');
-
-
+    document.getElementById('copyMain').setAttribute('class', 'copyMob');
   }
 </script>
 
