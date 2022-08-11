@@ -20,7 +20,9 @@
     body {
       pointer-events: none;
       margin: 0;
-      background-color: #fffeed;
+      /* background-color: #fffeed; */
+      background-color: #fff;
+
     }
   </style>
   <style>
@@ -49,10 +51,10 @@
         font-family: Inter, sans-serif;
         font-size: 2.5em;
         letter-spacing: -0.05em;
-        color: #ff0000;
+        color: #00c717;
         left: 40px;
         top: 60px;
-        min-width: 200px;   
+        min-width: 200px;
         max-width: 500px;
       }
 
@@ -61,7 +63,7 @@
         font-family: Inter, sans-serif;
         font-size: 1.5em;
         letter-spacing: -0.05em;
-        color: #ff0000;
+        color: #00c717;
         left: 40px;
         top: 60px;
         min-width: 200px;
@@ -73,7 +75,7 @@
         font-family: 'DM Mono', sans-serif;
         font-size: 1em;
         letter-spacing: -0.05em;
-        color: #000;
+        color: rgb(4, 54, 235);
         left: 540px;
         top: -30px;
         min-width: 200px;
@@ -86,7 +88,7 @@
         font-family: 'DM Mono', sans-serif;
         font-size: 0.9em;
         letter-spacing: -0.05em;
-        color: #000;
+        color: rgb(4, 54, 235);
         left: 440px;
         top: -10px;
         min-width: 200px;
@@ -147,7 +149,7 @@
         font-family: Inter, sans-serif;
         font-size: 3em;
         letter-spacing: -0.05em;
-        color: #ff0000;
+        color: #00c717;
         left: 40px;
         top: 80px;
         width: 85%;
@@ -159,7 +161,7 @@
         font-family: Inter, sans-serif;
         font-size: 4em;
         letter-spacing: -0.05em;
-        color: #ff0000;
+        color: #00c717;
         left: 40px;
         top: 80px;
         width: 85%;
@@ -171,7 +173,7 @@
         font-family: 'DM Mono', sans-serif;
         font-size: 1.5em;
         letter-spacing: -0.05em;
-        color: #000;
+        color: rgb(4, 54, 235);
         left: 40px;
         top: 110px;
         width: 80%;
@@ -182,7 +184,7 @@
         font-family: 'DM Mono', sans-serif;
         font-size: 2.5em;
         letter-spacing: -0.05em;
-        color: #000;
+        color: rgb(4, 54, 235);
         left: 40px;
         top: 110px;
         width: 80%;
@@ -252,12 +254,14 @@
       const size = cW / 5;
       const divisions = 100;
 
-      const gridHelper = new THREE.GridHelper(size, divisions, 0xcccccc, 0xcccccc);
+      const gridHelper = new THREE.GridHelper(size, divisions, 0xff0000, 0xff0000);
       scene.add(gridHelper);
 
 
 
-      scene.fog = new THREE.Fog(0xfffeed, 0.1, 60);
+      /* scene.fog = new THREE.Fog(0xfffeed, 0.1, 60); */
+      scene.fog = new THREE.Fog(0xffffff, 0.1, 60);
+
       gridHelper.position.y = -3;
       camera.position.z = -10;
       camera.aspect = cW / cH;
