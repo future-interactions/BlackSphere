@@ -98,8 +98,8 @@
         height: 1px;
         color: #000;
       
-        top: -20px;
-       left: 20px;
+        padding-left: 20px;
+        padding-top: 10px;
        width: 95%;
       }
 
@@ -166,10 +166,18 @@
         max-width: 90%;
         top: 80px;
       }
-      @media screen and (min-width: 800px) {
+      @media screen and (max-height: 480px) and (orientation: landscape){
   body {
-    background-color: lavender;
-  }
+    div.tertiary {
+        position: relative;
+        font-family: 'DM Mono', sans-serif;
+        font-size: 0.9em;
+        letter-spacing: -0.05em;
+        color: rgb(255,0,0);
+        left: 20px;
+        top: 80px;
+        width: 90%;
+      }  }
 }
   </style>
 
