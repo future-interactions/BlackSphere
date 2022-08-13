@@ -151,6 +151,16 @@
 
       }
 
+      div.logoMob {
+        position: relative;
+        left: 40px;
+        top: 40px;
+
+        width: 45%;
+
+        filter: invert(48%) brightness(100%) contrast(100%);
+
+      }
 
       div.introDesktop {
         position: relative;
@@ -173,7 +183,6 @@
         left: 40px;
         top: 80px;
         width: 85%;
-        min-width: 600px;
       }
 
       div.copyDesktop {
@@ -201,13 +210,12 @@
       div.footerDesktop {
         position: relative;
         font-family: 'DM Mono', sans-serif;
-        font-size: 1.2em;
+        font-size: 0.9em;
         letter-spacing: -0.05em;
-        color: rgb(137, 137, 137);
+        color: rgb(4, 54, 235);
         left: 40px;
         top: 140px;
-        width: 85%;
-        min-width: 600px;
+        width: 80%;
 
       }
 
@@ -323,6 +331,7 @@
 </body>
 <script>
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.getElementById('logo').setAttribute('class', 'logoMob');
     document.getElementById('intro').setAttribute('class', 'introMob');
     document.getElementById('copy').setAttribute('class', 'copyMob');
     document.getElementById('footer').setAttribute('class', 'footerMob');
