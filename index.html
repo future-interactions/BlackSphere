@@ -268,7 +268,7 @@
       let isMob = new Boolean(false);
       let size = 5;
       let divisions = 100;
-
+      let gCol = new THREE.Color( 0xff0000 );
       console.log(isMob);
       const cW = window.innerWidth;
       const cH = window.innerWidth;
@@ -289,12 +289,14 @@
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         size = cW / 5;
         divisions = 25;
+        gCol = 0xFF9E9E;
       } else {
         size = cW / 5;
         divisions = 100;
+        gCol = 0xff8787;
       }
 
-      const gridHelper = new THREE.GridHelper(size, divisions, 0xff8787, 0xff8787);
+      const gridHelper = new THREE.GridHelper(size, divisions, gCol, gCol);
 
       scene.add(gridHelper);
 
