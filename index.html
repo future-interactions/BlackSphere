@@ -199,7 +199,7 @@
       div.copyMob {
         position: relative;
         font-family: 'DM Mono', sans-serif;
-        font-size: .09em;
+        font-size: 0.9em;
         letter-spacing: -0.05em;
         color: rgb(4, 54, 235);
         left: 20px;
@@ -257,6 +257,10 @@
     <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
 
     <script>
+      let isMob = new Boolean(false);
+      let size=100;
+      let divisions=10;
+      console.log(isMob);
       const cW = window.innerWidth;
       const cH = window.innerWidth;
       const scene = new THREE.Scene();
@@ -273,10 +277,16 @@
       const light = new THREE.PointLight(0xffffff, 5, 50);
       light.position.set(50, 50, 50);
       scene.add(light);
-      const size = cW / 5;
-      const divisions = 75;
+      if (isMob===true) {
+        size = cW / 5;
+         divisions = 25;
+      } else {
+        size = cW / 5;
+         divisions = 100;
+      }
 
       const gridHelper = new THREE.GridHelper(size, divisions, 0xff8787, 0xff8787);
+
       scene.add(gridHelper);
 
 
@@ -341,6 +351,7 @@
     document.getElementById('intro').setAttribute('class', 'introMob');
     document.getElementById('copy').setAttribute('class', 'copyMob');
     document.getElementById('footer').setAttribute('class', 'footerMob');
+    isMob = true;
   }
 </script>
 
