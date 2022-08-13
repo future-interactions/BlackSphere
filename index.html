@@ -207,7 +207,7 @@
       div.copyMob {
         position: relative;
         font-family: 'DM Mono', sans-serif;
-        font-size: 0.9em;
+        font-size: 1.1em;
         letter-spacing: -0.05em;
         color: rgb(4, 54, 235);
         left: 20px;
@@ -246,7 +246,7 @@
         top: 140px;
       }
 
-      div.breakHR {
+      div.breakMob {
         position: relative;
         color: rgb(0, 0, 0);
         left: 20px;
@@ -288,7 +288,7 @@
       scene.add(light);
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         size = cW / 5;
-        divisions = 10;
+        divisions = 25;
       } else {
         size = cW / 5;
         divisions = 100;
@@ -342,10 +342,8 @@
     technology and shifting socio-cultural patterns, and model tangible near future scenarios to learn about the
     implications of new forms of interaction and behaviour.
     </BR> </BR>
-    Due to the highly confidential nature of our work we are unable to share the details of any of our past or current
-    projects.
   </div>
-  <div id=rule class="breakHR">
+  <div id="rule" class="breakHR">
     <HR>
   </div>
   <div id="footer" class="footerDesktop">
@@ -360,7 +358,8 @@
     document.getElementById('intro').setAttribute('class', 'introMob');
     document.getElementById('copy').setAttribute('class', 'copyMob');
     document.getElementById('footer').setAttribute('class', 'footerMob');
-    isMob = true;
+    document.getElementById('rule').setAttribute('class', 'breakMob');
+
   }
 </script>
 
