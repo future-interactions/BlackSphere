@@ -52,7 +52,7 @@
 
       div.logoMob {
         position: relative;
-        left: 40px;
+        left: 20px;
         top: 40px;
         width: 40%;
 
@@ -78,10 +78,9 @@
         font-size: 1.5em;
         letter-spacing: -0.05em;
         color: #00c717;
-        left: 40px;
+        left: 20px;
         top: 60px;
-        min-width: 200px;
-        max-width: 400px;
+    width: 40%;
       }
 
       div.copyDesktop {
@@ -103,10 +102,9 @@
         font-size: 0.9em;
         letter-spacing: -0.05em;
         color: rgb(4, 54, 235);
-        left: 440px;
-        top: -10px;
-        min-width: 200px;
-        max-width: 400px;
+        left: 50%;
+        top: 0px;
+   width: 90%;
 
       }
 
@@ -289,11 +287,11 @@
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         size = cW / 5;
         divisions = 25;
-        gCol = 0xFF9E9E;
+        gCol = 0xFFC8C8;
       } else {
         size = cW / 5;
         divisions = 100;
-        gCol = 0xff8787;
+        gCol = 0xFF9E9E;
       }
 
       const gridHelper = new THREE.GridHelper(size, divisions, gCol, gCol);
