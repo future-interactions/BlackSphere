@@ -142,12 +142,12 @@ div.hr {
   div.headline {
     position: relative;
     font-family: Inter, sans-serif;
-    font-size: 1.7em;
+    font-size: 1.6em;
     letter-spacing: -0.05em;
     color: #00c717;
     left: 20px;
     top: 30px;
-    width: 35%;
+    width: 40%;
   }
 
   div.main_text {
@@ -156,9 +156,9 @@ div.hr {
     font-size: 1em;
     letter-spacing: -0.05em;
     color: rgb(4, 54, 235);
-    left: 40%;
+    left: 43%;
     top: -40px;
-    max-width: 55%;
+    max-width: 54%;
   }
 
   div.hr {
