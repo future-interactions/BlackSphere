@@ -239,3 +239,66 @@ div.hr {
   }
 
 }
+
+/* Hamburger menu */
+.overlay {
+  height: 100%;
+  width: 90%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 5%;
+  left: 5%;
+  height: 85%;
+ 
+  background-color: rgba(255,255,255, 0.75);
+
+  border-style: solid;
+  border-color: rgb(255,0,0);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-family: Inter, sans-serif;
+  font-size: 1.8em;
+  letter-spacing: -0.05em;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #ff0000;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-size: 30px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.hamburger{
+  color: red;
+  font-size: 36px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  pointer-events: auto;
+  cursor: pointer;
+
+}
