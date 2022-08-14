@@ -11,8 +11,6 @@ canvas {
 }
 
 
-
-/* @media (orientation: landscape) { */
 div.top_left_grey {
   position: relative;
   left: 20px;
@@ -21,9 +19,7 @@ div.top_left_grey {
   min-width: 200px;
   max-width: 300px;
   filter: invert(48%) brightness(100%) contrast(100%);
-
 }
-
 
 
 
@@ -49,7 +45,6 @@ div.main_text {
   left: 520px;
   top: -50px;
   max-width: 600px;
-
 }
 
 
@@ -61,9 +56,7 @@ div.tertiary {
   letter-spacing: -0.05em;
   color: rgb(137, 137, 137);
   left: 20px;
-
   max-width: 500px;
-
 }
 
 
@@ -72,13 +65,12 @@ div.hr {
   position: relative;
   height: 1px;
   color: #000;
-
   left: 20px;
   top: -10px;
   width: 95%;
 }
 
-
+/* mobile portrait */
 @media only screen and (max-width: 480px) {
 
 
@@ -86,14 +78,9 @@ div.hr {
     position: relative;
     left: 20px;
     top: 20px;
-
     width: 55%;
-
     filter: invert(48%) brightness(100%) contrast(100%);
-
   }
-
-
 
   div.headline {
     position: relative;
@@ -136,11 +123,9 @@ div.hr {
     top: 90px;
     width: 90%;
   }
-
-
-
 }
 
+/* mobile landscape */
 @media screen and (max-height: 480px) and (orientation: landscape) {
 
   div.top_left_grey {
@@ -154,21 +139,16 @@ div.hr {
 
   }
 
-
-
-
   div.headline {
     position: relative;
     font-family: Inter, sans-serif;
-    font-size: 1.8em;
+    font-size: 1.7em;
     letter-spacing: -0.05em;
     color: #00c717;
     left: 20px;
     top: 30px;
-    width: 45%;
+    width: 40%;
   }
-
-
 
   div.main_text {
     position: relative;
@@ -176,12 +156,10 @@ div.hr {
     font-size: 1em;
     letter-spacing: -0.05em;
     color: rgb(4, 54, 235);
-    left: 50%;
+    left: 45%;
     top: -40px;
-    max-width: 45%;
-
+    max-width: 50%;
   }
-
 
   div.hr {
     position: relative;
@@ -201,7 +179,5 @@ div.hr {
     max-width: 80%;
 
   }
-
-
 
 }
