@@ -72,6 +72,7 @@
       function animate() {
         requestAnimationFrame(animate);
         camera.lookAt(pt);
+        gridHelper.rotation.y += 0.0005;
         renderer.render(scene, camera);
       };
       animate();
