@@ -10,9 +10,14 @@ canvas {
 }
 
 strong {
-  font-style: bold;
- 
+  font-style: bold; 
 }
+li {
+ padding-left: 40px;
+ text-indent: -1.4em;
+}
+
+
 div.top_left_grey {
   position: relative;
   left: 20px;
@@ -79,7 +84,7 @@ div.hr {
   /* letter-spacing: -0.05em; */
   color: rgb(0, 0, 0);
   left: 20px;
-  max-width: 60%;
+  max-width: 50%;
 }
 
 
