@@ -10,13 +10,36 @@ canvas {
 }
 
 strong {
-  font-style: bold; 
-}
-li {
- padding-left: 40px;
- text-indent: -1.4em;
+  font-style: bold;
 }
 
+li {
+  padding-left: 40px;
+  text-indent: -1.4em;
+}
+
+.cus_btn {
+  background-color: rgb(4, 54, 235, 0.45);
+  /* border: 2px solid rgb(4, 54, 235); */
+  border: none;
+  color: white;
+  padding: .2em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'DM Mono', sans-serif;
+  font-size: 1em;
+  border-radius: .75em;
+  cursor: not-allowed;
+  transition-duration: 0.4s;
+}
+
+
+/* .cus_btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(4, 54, 235);
+
+} */
 
 div.top_left_grey {
   position: relative;
@@ -90,12 +113,12 @@ div.hr {
 
 /* mobile portrait */
 @media only screen and (max-width: 480px) {
-  
+
   li {
     padding-left: 40px;
     text-indent: -1.2em;
-   }
-   
+  }
+
 
   div.top_left_grey {
     position: relative;
@@ -148,6 +171,7 @@ div.hr {
     top: 90px;
     width: 90%;
   }
+
   .formal_info {
     position: relative;
     font-family: Inter, sans-serif;
@@ -215,14 +239,11 @@ div.hr {
   }
 
 }
-/* ipad portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
 
- div.top_left_grey {
+/* ipad portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+  div.top_left_grey {
     position: relative;
     left: 20px;
     top: 20px;
@@ -284,11 +305,11 @@ div.hr {
   top: 5%;
   left: 5%;
   height: 85%;
- 
-  background-color: rgba(255,255,255, 0.90);
+
+  background-color: rgba(255, 255, 255, 0.90);
 
   border-style: solid;
-  border-color: rgb(255,0,0);
+  border-color: rgb(255, 0, 0);
 }
 
 .overlay-content {
@@ -313,7 +334,8 @@ div.hr {
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #ff0000;
 }
 
@@ -326,7 +348,7 @@ div.hr {
   cursor: pointer;
 }
 
-.hamburger{
+.hamburger {
   color: rgb(137, 137, 137);
 
   font-size: 36px;
