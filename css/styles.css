@@ -157,14 +157,14 @@ div.hr {
     letter-spacing: -0.05em;
     color: rgb(4, 54, 235);
     left: 43%;
-    top: -40px;
+    top: -35px;
     max-width: 54%;
   }
 
   div.hr {
     position: relative;
     color: #000;
-    top: -10px;
+    top: -20px;
     left: 20px;
     width: 95%;
   }
@@ -177,7 +177,7 @@ div.hr {
     color: rgb(137, 137, 137);
     left: 20px;
     max-width: 80%;
-
+    top: -10px;
   }
 
 }
