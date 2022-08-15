@@ -104,10 +104,10 @@ div.hr {
   position: relative;
   font-family: Inter, sans-serif;
   font-size: 1em;
-  /* letter-spacing: -0.05em; */
+  line-height: 140%;
   color: rgb(0, 0, 0);
   left: 20px;
-  max-width: 50%;
+  max-width: 550px;
 }
 
 
@@ -177,6 +177,7 @@ div.hr {
     font-family: Inter, sans-serif;
     font-size: 1em;
     /* letter-spacing: -0.05em; */
+    line-height: 140%;
     color: rgb(0, 0, 0);
     left: 20px;
     max-width: 90%;
