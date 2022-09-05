@@ -51,6 +51,22 @@ div.top_left_grey {
   filter: invert(48%) brightness(100%) contrast(100%);
 }
 
+div.diagram {
+  position: absolute;
+  left: 560px;
+  top: 160px;
+
+  /* min-width: 200px;
+  max-width: 300px; */
+}
+div.diagram_lower {
+  position: absolute;
+  left: 560px;
+  top: 740px;
+
+  /* min-width: 200px;
+  max-width: 300px; */
+}
 
 
 div.headline {
@@ -75,6 +91,28 @@ div.main_text {
   left: 520px;
   top: -50px;
   max-width: 600px;
+}
+
+div.diagram_title_top {
+  position: absolute;
+  left: 580px;
+  top: 120px;
+  width: 30%;
+  font-family: 'DM Mono', sans-serif;
+  font-size: 1em;
+  letter-spacing: -0.05em;
+  color: rgb(4, 54, 235);
+}
+
+div.diagram_title_secondary {
+  position: absolute;
+  left: 580px;
+  top:720px;
+  width: 30%;
+  font-family: 'DM Mono', sans-serif;
+  font-size: 1em;
+  letter-spacing: -0.05em;
+  color: rgb(4, 54, 235);
 }
 
 
@@ -107,7 +145,7 @@ div.hr {
   line-height: 140%;
   color: rgb(0, 0, 0);
   left: 20px;
-  max-width: 550px;
+  max-width: 490px;
 }
 
 
