@@ -161,7 +161,7 @@ top: 80px;
   div.hr {
     position: relative;
     color: #000;
-
+    top: -10px;
   }
 
   div.tertiary {
