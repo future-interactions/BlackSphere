@@ -15,9 +15,7 @@ div.top_left_grey {
   position: relative;
   left: 20px;
   top: 20px;
-  width: 20%;
-  min-width: 200px;
-  max-width: 300px;
+  width: 300px;
   filter: invert(48%) brightness(100%) contrast(100%);
 }
 
@@ -31,19 +29,19 @@ div.headline {
   color: #00c717;
   left: 20px;
   top: 40px;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 
 
 div.main_text {
-  position: relative;
+  position: absolute;
   font-family: 'DM Mono', sans-serif;
   font-size: 1em;
   letter-spacing: -0.05em;
   color: rgb(4, 54, 235);
-  left: 520px;
-  top: -50px;
+  left: 540px;
+  top: 120px;
   max-width: 600px;
 }
 
@@ -56,6 +54,7 @@ div.tertiary {
   letter-spacing: -0.05em;
   color: rgb(137, 137, 137);
   left: 20px;
+  top: 110px;
   max-width: 500px;
 }
 
@@ -65,9 +64,7 @@ div.hr {
   position: relative;
   height: 1px;
   color: #000;
-  left: 20px;
-  top: -10px;
-  width: 95%;
+  top: 100px;
 }
 
 /* mobile portrait */
@@ -183,14 +180,11 @@ div.hr {
   }
 
 }
-/* ipad portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
 
- div.top_left_grey {
+/* ipad portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+  div.top_left_grey {
     position: relative;
     left: 20px;
     top: 20px;
@@ -252,11 +246,11 @@ div.hr {
   top: 5%;
   left: 5%;
   height: 85%;
- 
-  background-color: rgba(255,255,255, 0.90);
+
+  background-color: rgba(255, 255, 255, 0.90);
 
   border-style: solid;
-  border-color: rgb(255,0,0);
+  border-color: rgb(255, 0, 0);
 }
 
 .overlay-content {
@@ -281,7 +275,8 @@ div.hr {
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #ff0000;
 }
 
@@ -294,7 +289,7 @@ div.hr {
   cursor: pointer;
 }
 
-.hamburger{
+.hamburger {
   color: rgb(137, 137, 137);
   font-size: 36px;
   position: absolute;

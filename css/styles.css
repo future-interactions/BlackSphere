@@ -83,13 +83,13 @@ div.headline {
 
 
 div.main_text {
-  position: relative;
+  position: absolute;
   font-family: 'DM Mono', sans-serif;
   font-size: 1em;
   letter-spacing: -0.05em;
   color: rgb(4, 54, 235);
   left: 520px;
-  top: -50px;
+  top: 100px;
   max-width: 600px;
 }
 
