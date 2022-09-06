@@ -253,11 +253,12 @@ div.hr {
 
 .overlay-content {
   position: relative;
-  top: 25%;
   width: 100%;
-  text-align: center;
-  margin-top: 30px;
   font-family: Inter, sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   font-size: 1.8em;
   letter-spacing: -0.05em;
   pointer-events: auto;
@@ -268,6 +269,7 @@ div.hr {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
+
   color: #818181;
   display: block;
   transition: 0.3s;
