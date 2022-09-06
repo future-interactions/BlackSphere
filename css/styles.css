@@ -83,13 +83,13 @@ div.headline {
 
 
 div.main_text {
-  position: absolute;
+  position: relative;
   font-family: 'DM Mono', sans-serif;
   font-size: 1em;
   letter-spacing: -0.05em;
-  color: rgb(4, 54, 235);
+  color: rgb(137, 137, 137);
   left: 520px;
-  top: 100px;
+  top: -60px;
   max-width: 600px;
 }
 
@@ -337,27 +337,26 @@ div.hr {
 /* Hamburger menu */
 .overlay {
   height: 100%;
-  width: 90%;
+  width: 100%;
   display: none;
   position: fixed;
   z-index: 1;
-  top: 5%;
-  left: 5%;
-  height: 85%;
+  top: 0px;
+
 
   background-color: rgba(255, 255, 255, 0.90);
 
-  border-style: solid;
-  border-color: rgb(255, 0, 0);
+
 }
 
 .overlay-content {
   position: relative;
-  top: 25%;
   width: 100%;
-  text-align: center;
-  margin-top: 30px;
   font-family: Inter, sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   font-size: 1.8em;
   letter-spacing: -0.05em;
   pointer-events: auto;
@@ -368,6 +367,7 @@ div.hr {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
+
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -375,21 +375,21 @@ div.hr {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #ff0000;
+  color: rgb(4, 54, 235);
 }
 
 .overlay .closebtn {
+  color: rgb(137, 137, 137);
+  font-size: 36px;
   position: absolute;
-  top: 0px;
-  right: 15px;
-  font-size: 30px;
+  top: 14px;
+  right: 32px;
   pointer-events: auto;
   cursor: pointer;
 }
 
 .hamburger {
   color: rgb(137, 137, 137);
-
   font-size: 36px;
   position: absolute;
   top: 20px;
