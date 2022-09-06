@@ -239,18 +239,16 @@ div.hr {
 /* Hamburger menu */
 .overlay {
   height: 100%;
-  width: 90%;
+  width: 100%;
   display: none;
   position: fixed;
   z-index: 1;
-  top: 5%;
-  left: 5%;
-  height: 85%;
+  top: 0px;
+
 
   background-color: rgba(255, 255, 255, 0.90);
 
-  border-style: solid;
-  border-color: rgb(255, 0, 0);
+
 }
 
 .overlay-content {
@@ -277,14 +275,15 @@ div.hr {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #ff0000;
+  color: rgb(4, 54, 235);
 }
 
 .overlay .closebtn {
+  color: rgb(137, 137, 137);
+  font-size: 36px;
   position: absolute;
-  top: 0px;
-  right: 15px;
-  font-size: 30px;
+  top: 14px;
+  right: 32px;
   pointer-events: auto;
   cursor: pointer;
 }
