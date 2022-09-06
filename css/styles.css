@@ -241,7 +241,7 @@ div.hr {
     color: #00c717;
     left: 20px;
     top: 30px;
-    width: 50%;
+    width: 40%;
   }
 
   div.main_text {
@@ -258,7 +258,8 @@ div.hr {
   div.hr {
     position: relative;
     color: #000;
-   
+    top: 80px;
+
   }
 
   div.tertiary {
@@ -311,6 +312,7 @@ div.hr {
   div.hr {
     position: relative;
     color: rgb(0, 0, 0);
+    top: 80px;
 
   }
 
