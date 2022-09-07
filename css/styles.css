@@ -1,12 +1,11 @@
 body {
   margin: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 
 canvas {
   position: absolute;
-  pointer-events: auto;
 }
 
 strong {
