@@ -260,7 +260,6 @@ top: 80px;
 }
 
 .overlay a {
-  padding: 8px;
   text-decoration: none;
   font-size: 36px;
 
@@ -275,17 +274,17 @@ top: 80px;
 }
 
 .overlay .closebtn {
-  color: rgb(137, 137, 137);
+
   font-size: 36px;
   position: absolute;
-  top: 14px;
-  right: 32px;
+  top: 20px;
+  right: 35px;
   pointer-events: auto;
   cursor: pointer;
 }
 
 .hamburger {
-  color: rgb(137, 137, 137);
+
   font-size: 36px;
   position: absolute;
   top: 20px;
