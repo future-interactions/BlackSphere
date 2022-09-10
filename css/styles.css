@@ -176,7 +176,14 @@ div.hr {
     top: 40px;
     width: 80%;
   }
-
+  div.diagram {
+    position: relative;
+    left: 20px;
+    top: 60px;
+  
+    /* min-width: 200px;
+    max-width: 300px; */
+  }
 
   div.main_text {
     position: relative;
