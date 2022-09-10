@@ -191,8 +191,8 @@ div.hr {
   div.diagram {
     position: relative;
     left: 20px;
-    top: 60px;
-  max-width: 90%;
+    top: 20px;
+  width: 200px;
     /* min-width: 200px;
     max-width: 300px; */
   }
