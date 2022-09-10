@@ -100,7 +100,7 @@ div.diagram_title_top {
   font-family: 'DM Mono', sans-serif;
   font-size: 1em;
   letter-spacing: -0.05em;
-  color: rgb(4, 54, 235);
+  color: rgb(137, 137, 137);
 }
 
 div.diagram_title_secondary {
@@ -111,7 +111,7 @@ div.diagram_title_secondary {
   font-family: 'DM Mono', sans-serif;
   font-size: 1em;
   letter-spacing: -0.05em;
-  color: rgb(4, 54, 235);
+  color: rgb(137, 137, 137);
 }
 
 
@@ -176,6 +176,18 @@ div.hr {
     top: 40px;
     width: 80%;
   }
+
+  div.diagram_title_top {
+    position: relative;
+    left: 20px;
+    top: 120px;
+    width: 30%;
+    font-family: 'DM Mono', sans-serif;
+    font-size: 1em;
+    letter-spacing: -0.05em;
+    color: rgb(137, 137, 137);
+  }
+
   div.diagram {
     position: relative;
     left: 20px;
