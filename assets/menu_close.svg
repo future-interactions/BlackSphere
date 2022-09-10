@@ -3,13 +3,15 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 104.44 104.44" style="enable-background:new 0 0 104.44 104.44;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#0436EB;}
-	.st1{fill:none;stroke:#0436EB;stroke-width:7;stroke-linecap:round;stroke-miterlimit:10;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#0436EB;}
+	.st2{fill:none;stroke:#0436EB;stroke-width:7;stroke-linecap:round;stroke-miterlimit:10;}
 </style>
 <g>
-	<path class="st0" d="M52.22,9.22c23.71,0,43,19.29,43,43s-19.29,43-43,43s-43-19.29-43-43S28.51,9.22,52.22,9.22 M52.22,2.22
+	<circle class="st0" cx="52.22" cy="52.22" r="46.5"/>
+	<path class="st1" d="M52.22,9.22c23.71,0,43,19.29,43,43s-19.29,43-43,43s-43-19.29-43-43S28.51,9.22,52.22,9.22 M52.22,2.22
 		c-27.61,0-50,22.39-50,50s22.39,50,50,50s50-22.39,50-50S79.84,2.22,52.22,2.22L52.22,2.22z"/>
 </g>
-<line class="st1" x1="32.22" y1="32.22" x2="72.22" y2="72.22"/>
-<line class="st1" x1="72.22" y1="32.22" x2="32.22" y2="72.22"/>
+<line class="st2" x1="32.22" y1="32.22" x2="72.22" y2="72.22"/>
+<line class="st2" x1="72.22" y1="32.22" x2="32.22" y2="72.22"/>
 </svg>
