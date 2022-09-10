@@ -229,7 +229,7 @@ div.hr {
   .formal_info {
     position: relative;
     font-family: Inter, sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
     /* letter-spacing: -0.05em; */
     line-height: 140%;
     color: rgb(0, 0, 0);
