@@ -180,7 +180,7 @@ div.hr {
     position: relative;
     left: 20px;
     top: 60px;
-  
+  width: 90%;
     /* min-width: 200px;
     max-width: 300px; */
   }
