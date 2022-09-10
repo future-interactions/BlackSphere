@@ -58,6 +58,7 @@ div.diagram {
   /* min-width: 200px;
   max-width: 300px; */
 }
+
 div.diagram_lower {
   position: absolute;
   left: 560px;
@@ -106,7 +107,7 @@ div.diagram_title_top {
 div.diagram_title_secondary {
   position: absolute;
   left: 580px;
-  top:720px;
+  top: 720px;
   width: 30%;
   font-family: 'DM Mono', sans-serif;
   font-size: 1em;
@@ -133,7 +134,7 @@ div.hr {
   height: 1px;
   color: #000;
   top: -10px;
- 
+
 }
 
 .formal_info {
@@ -192,7 +193,7 @@ div.hr {
     position: relative;
     left: 20px;
     top: 20px;
-  width: 90%;
+    width: 90%;
     /* min-width: 200px;
     max-width: 300px; */
   }
@@ -233,7 +234,7 @@ div.hr {
     line-height: 140%;
     color: rgb(0, 0, 0);
     left: 20px;
-    max-width: 90%;
+   width: 80%;
   }
 }
 
