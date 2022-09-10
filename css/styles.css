@@ -182,7 +182,7 @@ div.hr {
     position: relative;
     left: 20px;
     top: 40px;
-    width: 30%;
+    width: 60%;
     font-family: 'DM Mono', sans-serif;
     font-size: 1em;
     letter-spacing: -0.05em;
@@ -206,7 +206,7 @@ div.hr {
     color: rgb(137, 137, 137);
     left: 20px;
     top: 60px;
-    width: 80%;
+    width: 85%;
   }
 
   div.hr {
