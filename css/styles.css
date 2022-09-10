@@ -84,12 +84,23 @@ div.headline {
 
 div.main_text {
   position: relative;
-  font-family: 'DM Mono', sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1em;
-  letter-spacing: -0.05em;
-  color: rgb(137, 137, 137);
+  line-height: 140%;
+  color: rgb(0, 0, 0);
   left: 520px;
-  top: -60px;
+  top: -55px;
+  max-width: 600px;
+}
+
+div.main_text_offset {
+  position: relative;
+  font-family: Inter, sans-serif;
+  font-size: 1em;
+  line-height: 140%;
+  color: rgb(0, 0, 0);
+  left: 520px;
+  top: -150px;
   max-width: 600px;
 }
 

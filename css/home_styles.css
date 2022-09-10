@@ -15,7 +15,9 @@ div.top_left_grey {
   position: relative;
   left: 20px;
   top: 20px;
-  width: 300px;
+  width: 20%;
+  min-width: 200px;
+  max-width: 300px;
   filter: invert(48%) brightness(100%) contrast(100%);
 }
 
