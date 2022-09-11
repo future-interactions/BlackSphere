@@ -290,10 +290,21 @@ div.hr {
 
   div.main_text {
     position: relative;
-    font-family: 'DM Mono', sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1em;
-    letter-spacing: -0.05em;
-    color: rgb(137, 137, 137);
+    line-height: 140%;
+    color: rgb(0, 0, 0);
+    left: 43%;
+    top: -35px;
+    max-width: 54%;
+  }
+
+  div.main_text_offset {
+    position: relative;
+    font-family: Inter, sans-serif;
+    font-size: 1em;
+    line-height: 140%;
+    color: rgb(6, 6, 6);
     left: 43%;
     top: -35px;
     max-width: 54%;
@@ -317,6 +328,15 @@ div.hr {
     top: -10px;
   }
 
+  .formal_info {
+    position: relative;
+    font-family: Inter, sans-serif;
+    font-size: 1em;
+    line-height: 140%;
+    color: rgb(0, 0, 0);
+    left: 20px;
+    max-width: 54%;
+  }
 }
 
 /* ipad portrait */
