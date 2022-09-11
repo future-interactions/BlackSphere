@@ -288,6 +288,26 @@ div.hr {
     width: 40%;
   }
 
+  div.diagram {
+    position: absolute;
+    left: 45%;
+    top: 180px;
+    width: 50%;
+    /* min-width: 200px;
+    max-width: 300px; */
+  }
+
+  div.diagram_title_top {
+    position: absolute;
+    left: 43%;
+    top: 100px;
+    width: 30%;
+    font-family: 'DM Mono', sans-serif;
+    font-size: 1em;
+    letter-spacing: -0.05em;
+    color: rgb(137, 137, 137);
+  }
+
   div.main_text {
     position: relative;
     font-family: Inter, sans-serif;
@@ -306,7 +326,7 @@ div.hr {
     line-height: 140%;
     color: rgb(6, 6, 6);
     left: 43%;
-    top: -35px;
+    top: -85px;
     max-width: 54%;
   }
 
