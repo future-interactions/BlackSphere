@@ -211,10 +211,23 @@ div.hr {
 
   div.main_text {
     position: relative;
-    font-family: 'DM Mono', sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.1em;
-    letter-spacing: -0.05em;
-    color: rgb(137, 137, 137);
+    /* letter-spacing: -0.05em; */
+    line-height: 140%;
+    color: rgb(0, 0, 0);
+    left: 20px;
+    top: 60px;
+    width: 80%;
+  }
+
+  div.main_text_offset {
+    position: relative;
+    font-family: Inter, sans-serif;
+    font-size: 1.1em;
+    /* letter-spacing: -0.05em; */
+    line-height: 140%;
+    color: rgb(0, 0, 0);
     left: 20px;
     top: 60px;
     width: 80%;
