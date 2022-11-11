@@ -59,6 +59,14 @@ div.diagram {
   max-width: 300px; */
 }
 
+div.logo_strip {
+  position: relative;
+  left: 20px;
+ top:-15px;
+   min-width: 200px;
+  max-width: 300px;
+}
+
 div.diagram_lower {
   position: absolute;
   left: 560px;
@@ -208,7 +216,14 @@ div.hr {
     /* min-width: 200px;
     max-width: 300px; */
   }
-
+  div.logo_strip {
+    position: absolute;
+    top: 20px;
+    width: 90%;
+  
+    /* min-width: 200px;
+    max-width: 300px; */
+  }
   div.main_text {
     position: relative;
     font-family: Inter, sans-serif;
@@ -292,6 +307,14 @@ div.hr {
     position: absolute;
     left: 45%;
     top: 135px;
+    width: 50%;
+    /* min-width: 200px;
+    max-width: 300px; */
+  }
+
+  div.logo_strip {
+    position: absolute;
+    left: 45%;
     width: 50%;
     /* min-width: 200px;
     max-width: 300px; */
