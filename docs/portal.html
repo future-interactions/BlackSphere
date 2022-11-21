@@ -18,26 +18,88 @@
 </head>
 
 <body>
+  <!-- _________________________ -->
+  <!-- three.js grid interaction -->
+  <!-- _________________________ -->
+  <div>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script>
+      let isMob = new Boolean(false);
+      let size = 5;
+      let divisions = 100;
+      let gCol = new THREE.Color(0xff0000);
+      console.log(isMob);
+      const cW = window.innerWidth;
+      const cH = window.innerWidth;
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({
+        alpha: true
+      });
+      const pt = new THREE.Vector3(0, -1, -1);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        size = cW / 1;
+        divisions = 40;
+        // gCol = 0xFFC8C8;
+        gCol = 0xaaaaaa;
+      } else {
+        size = cW / 2.5;
+        divisions = 45;
+        // gCol = 0xFF9E9E;
+        gCol = 0xcccccc;
+      }
+      const geometry = new THREE.SphereGeometry(45, cW/10, cW/10);
+      const material = new THREE.MeshBasicMaterial({
+        color: gCol,
+        wireframe: true
+      });
+      const sphere = new THREE.Mesh(geometry, material);
+      scene.add(sphere);
+      sphere.rotation.x = 1.57;
+      /* scene.fog = new THREE.Fog(0xfffeed, 0.1, 60); */
+      scene.fog = new THREE.Fog(0xffffff, 0.1, 60);
+
+      camera.position.z = -10;
+      camera.aspect = cW / cH;
+      window.addEventListener('resize', onWindowResize);
+
+      function onWindowResize() {
+        location.reload();
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+
+      function animate() {
+        requestAnimationFrame(animate);
+        camera.lookAt(pt);
+        sphere.rotation.y += 0.00075;
+        renderer.render(scene, camera);
+      };
+      animate();
+    </script>
+    </div>
   <div id="logo" class="top_left_grey">
     <a href="../index.html"><img src="../assets/toofi_logo_trim.svg" alt="The Office of Future Interactions Logo"></a>
   </div>
   <div id="intro" class="headline">
-Secure models, demos, prototypes and pilots. </div>
+    Secure models, demos, prototypes and pilots. </div>
 
   <div id="copy" class="main_text">
     <div>
       <label for="username">Client ID:</BR></label>
       <input type="text" id="username" name="username">
-  </div>
-</BR>
-  <div>
+    </div>
+    </BR>
+    <div>
       <label for="pass">Password (8 characters minimum):</BR></label>
-      <input type="password" id="pass" name="password"
-             minlength="8" required></BR></BR>
-  </div>
+      <input type="password" id="pass" name="password" minlength="8" required></BR></BR>
+    </div>
 
-  <input class="cus_btn" type="submit" value="Sign in">
-
+    <input class="cus_btn" type="submit" value="Sign in">
+    </BR></BR> </BR></BR>
   </div>
   <div id="rule" class="hr" style="padding-left: 20px;padding-right: 20px;">
     <HR>
@@ -45,26 +107,28 @@ Secure models, demos, prototypes and pilots. </div>
   <div id="footer" class="tertiary">
     © 2022 The Office of Future Interactions Ltd <BR>
     Registered Number: 13611734. Registered in England & Wales.
+    <BR><BR><BR><BR>
   </div>
 
- <!-- _________________________ -->
+  <!-- _________________________ -->
   <!--    Hamburger menu HTML    -->
   <!-- _________________________ -->
   <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">   <img src="../assets/menu_close.svg" width="20px" height="20px" alt="Hamburger Menu Open Button" />
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> <img src="../assets/menu_close.svg" width="20px"
+        height="20px" alt="Hamburger Menu Open Button" />
     </a>
     <div class="overlay-content">
 
       <a href="about_us.html">About Us</a>
       <a href="design_model.html">Design Model</a>
       <a href="#">Portal</a>
-          <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 
   <div class="hamburger" onclick="openNav()">
-   <img src="../assets/menu_btn.svg" width="20px" height="20px" alt="Hamburger Menu Opne Button" />
-  
+    <img src="../assets/menu_btn.svg" width="20px" height="20px" alt="Hamburger Menu Opne Button" />
+
   </div>
 
   <script>

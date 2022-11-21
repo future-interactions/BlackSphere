@@ -16,6 +16,10 @@ li {
   padding-left: 40px;
   text-indent: -1.4em;
 }
+@font-face {
+  font-family: "Prata";
+  src: url(../assets/Prata-Regular.ttf);
+}
 
 .cus_btn {
   background-color: rgb(4, 54, 235, 0.45);
@@ -62,9 +66,9 @@ div.diagram {
 div.logo_strip {
   position: relative;
   left: 20px;
- top:-15px;
+ top:10px;
    min-width: 200px;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 div.diagram_lower {
@@ -79,10 +83,13 @@ div.diagram_lower {
 
 div.headline {
   position: relative;
-  font-family: Inter, sans-serif;
+  /* font-family: Inter, sans-serif; */
+  font-family: Prata, serif;
   font-size: 2.5em;
   letter-spacing: -0.05em;
-  color: #00c717;
+  line-height: 1.2em;
+  /* color: #00c717; */
+  color: #242424;
   left: 20px;
   top: 40px;
   max-width: 500px;
@@ -188,13 +195,16 @@ div.hr {
 
   div.headline {
     position: relative;
-    font-family: Inter, sans-serif;
-    font-size: 1.8em;
-    letter-spacing: -0.05em;
-    color: #00c717;
+   /* font-family: Inter, sans-serif; */
+   font-family: Prata, serif;
+   font-size: 2.4em;
+   letter-spacing: -0.05em;
+   line-height: 1.15em;
+   /* color: #00c717; */
+   color: #242424;
     left: 20px;
     top: 40px;
-    width: 80%;
+    width: 85%;
   }
 
   div.diagram_title_top {
@@ -217,8 +227,9 @@ div.hr {
     max-width: 300px; */
   }
   div.logo_strip {
-    position: absolute;
+    position: relative;
     top: 20px;
+    left: 20px;
     width: 90%;
   
     /* min-width: 200px;
@@ -251,7 +262,7 @@ div.hr {
   div.hr {
     position: relative;
     color: rgb(0, 0, 0);
-    top: 80px;
+    top: 20px;
   }
 
   div.tertiary {
@@ -261,7 +272,7 @@ div.hr {
     letter-spacing: -0.05em;
     color: rgb(137, 137, 137);
     left: 20px;
-    top: 90px;
+    top: 35px;
     width: 90%;
   }
 
@@ -273,7 +284,7 @@ div.hr {
     line-height: 140%;
     color: rgb(0, 0, 0);
     left: 20px;
-    top: 20px;
+    top: 0px;
     width: 90%;
   }
 }
@@ -294,13 +305,16 @@ div.hr {
 
   div.headline {
     position: relative;
-    font-family: Inter, sans-serif;
-    font-size: 1.6em;
+   /* font-family: Inter, sans-serif; */
+   font-family: Prata, serif;
+    font-size: 1.9em;
+    line-height: 1.1em;
     letter-spacing: -0.05em;
-    color: #00c717;
+     /* color: #00c717; */
+     color: #242424;
     left: 20px;
     top: 30px;
-    width: 40%;
+    width: 38%;
   }
 
   div.diagram {
@@ -313,9 +327,11 @@ div.hr {
   }
 
   div.logo_strip {
-    position: absolute;
-    left: 45%;
-    width: 50%;
+    position: relative;
+     top: 20px; 
+     left: 20px;
+    width: 90%;
+  
     /* min-width: 200px;
     max-width: 300px; */
   }
@@ -347,9 +363,9 @@ div.hr {
     font-family: Inter, sans-serif;
     font-size: 1em;
     line-height: 140%;
-    color: rgb(6, 6, 6);
+    color: rgb(0, 0, 0);
     left: 43%;
-    top: -100px;
+    top: -135px;
     max-width: 54%;
   }
 
@@ -383,7 +399,9 @@ div.hr {
 }
 
 /* ipad portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) { */ */
+
+
 
   div.top_left_grey {
     position: relative;
@@ -395,10 +413,13 @@ div.hr {
 
   div.headline {
     position: relative;
-    font-family: Inter, sans-serif;
-    font-size: 1.8em;
-    letter-spacing: -0.05em;
-    color: #00c717;
+  /* font-family: Inter, sans-serif; */
+  font-family: Prata, serif;
+  font-size: 2.5em;
+  letter-spacing: -0.05em;
+  line-height: 1.2em;
+  /* color: #00c717; */
+  color: #f200ff;
     left: 20px;
     top: 40px;
     width: 85%;

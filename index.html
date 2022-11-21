@@ -59,7 +59,8 @@
       scene.add(gridHelper);
       /* scene.fog = new THREE.Fog(0xfffeed, 0.1, 60); */
       scene.fog = new THREE.Fog(0xffffff, 0.1, 60);
-      gridHelper.position.y = -3;
+      gridHelper.position.y = -2;
+      gridHelper.rotation.x = -0.25;
       camera.position.z = -10;
       camera.aspect = cW / cH;
       window.addEventListener('resize', onWindowResize);

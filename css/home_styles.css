@@ -10,6 +10,10 @@ canvas {
   pointer-events: auto;
 }
 
+@font-face {
+  font-family: "Prata";
+  src: url(../assets/Prata-Regular.ttf);
+}
 
 div.top_left_grey {
   position: relative;
@@ -25,13 +29,16 @@ div.top_left_grey {
 
 div.headline {
   position: relative;
-  font-family: Inter, sans-serif;
-  font-size: 2.5em;
+  /* font-family: Inter, sans-serif; */
+  font-family: Prata, serif;
+  font-size: 3.6em;
   letter-spacing: -0.05em;
-  color: #00c717;
+  line-height: 1.15em;
+  /* color: #00c717; */
+  color: #242424;
   left: 20px;
   top: 40px;
-  max-width: 600px;
+  max-width: 750px;
 }
 
 
@@ -85,13 +92,16 @@ div.hr {
 
   div.headline {
     position: relative;
-    font-family: Inter, sans-serif;
-    font-size: 2.35em;
+  /* font-family: Inter, sans-serif; */
+  font-family: Prata, serif;
+      font-size: 3em;
+      line-height: 1.15em;
     letter-spacing: -0.05em;
-    color: #00c717;
-    left: 20px;
+     /* color: #00c717; */
+     color: #242424;
+     left: 20px;
     top: 80px;
-    width:90%;
+    width:85%;
   }
 
 
@@ -140,10 +150,13 @@ top: 80px;
 
   div.headline {
     position: relative;
-    font-family: Inter, sans-serif;
-    font-size: 1.6em;
+    /* font-family: Inter, sans-serif; */
+    font-family: Prata, serif;
+    font-size: 2.6em;
+    line-height: 1.1em;
     letter-spacing: -0.05em;
-    color: #00c717;
+     /* color: #00c717; */
+     color: #242424;
     left: 20px;
     top: 30px;
     width: 50%;
@@ -192,10 +205,13 @@ top: 80px;
 
   div.headline {
     position: relative;
-    font-family: Inter, sans-serif;
-    font-size: 1.8em;
-    letter-spacing: -0.05em;
-    color: #00c717;
+   /* font-family: Inter, sans-serif; */
+   font-family: Prata, serif;
+   font-size: 2.5em;
+   letter-spacing: -0.05em;
+   line-height: 1.2em;
+   /* color: #00c717; */
+   color: #242424;
     left: 20px;
     top: 40px;
     width: 80%;
