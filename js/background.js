@@ -2,7 +2,8 @@ let isMob = new Boolean(false);
 let size = 5;
 let divisions = 100;
 let gCol = new THREE.Color(0xff0000);
-console.log(isMob);
+const planePos = [5,7,16,18,22];
+const planeSize = 3;
 const cW = window.innerWidth;
 const cH = window.innerWidth;
 const scene = new THREE.Scene();
@@ -27,29 +28,37 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   // gCol = 0xFF9E9E;
   gCol = 0xcccccc;
 }
-const texture = new THREE.TextureLoader().load( "assets/temp_sketch_texture.png" );
+const texture0 = new THREE.TextureLoader().load( "assets/temp_sketch_texture.png" );
+const texture1 = new THREE.TextureLoader().load( "assets/flower.png" );
+
 // texture.wrapS = THREE.RepeatWrapping;
 // texture.wrapT = THREE.RepeatWrapping;
 // texture.repeat.set( 4, 4 );
-const pGeometry = new THREE.PlaneGeometry( 3,3);
+const pGeometry = new THREE.PlaneGeometry( planeSize,planeSize);
 // const pMaterial = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
-const pMaterial = new THREE.MeshLambertMaterial({ map : texture,     transparent: true,
+const pMaterial0 = new THREE.MeshLambertMaterial({ map : texture0,     transparent: true,
 });
-const plane = new THREE.Mesh( pGeometry, pMaterial );
-plane.material.side = THREE.DoubleSide;
-scene.add( plane );
+const pMaterial1 = new THREE.MeshLambertMaterial({ map : texture1,     transparent: true,
+});
+const plane0 = new THREE.Mesh( pGeometry, pMaterial0 );
+const plane1 = new THREE.Mesh( pGeometry, pMaterial1 );
+
+plane0.material.side = THREE.DoubleSide;
+plane1.material.side = THREE.DoubleSide;
+
+scene.add( plane0 );
+scene.add( plane1 );
 const gridHelper = new THREE.GridHelper(size, divisions, gCol, gCol);
 scene.add(gridHelper);
-/* scene.fog = new THREE.Fog(0xfffeed, 0.1, 60); */
 scene.fog = new THREE.Fog(0xffffff, 0.1, 60);
-//gridHelper.position.y = -2.5;
-plane.position.y = 1.5;
-//plane.position.z = 5;
-//gridHelper.rotation.x = -0.25;
-//plane.rotation.x = -0.25;
+plane0.position.y = planeSize/2;
+plane1.position.y = planeSize/2;
+
 camera.position.y = 2;
 camera.position.z = -10;
-plane.position.z =10;
+plane0.position.z =planePos[0];
+plane1.position.x =planePos[1];
+
 camera.aspect = cW / cH;
 window.addEventListener('resize', onWindowResize);
 
@@ -64,9 +73,12 @@ function animate() {
   requestAnimationFrame(animate);
   camera.lookAt(pt);
   gridHelper.rotation.y += 0.00075;
-  plane.translateZ(-10);
-  plane.rotation.y += 0.00075;
-  plane.translateZ(10);
+  plane0.translateZ(-planePos[0]);
+  plane0.rotation.y += 0.00075;
+  plane0.translateZ(planePos[0]);
+  plane1.translateZ(-planePos[1]);
+  plane1.rotation.y += 0.00075;
+  plane1.translateZ(planePos[1]);
   renderer.render(scene, camera);
 };
 animate();
