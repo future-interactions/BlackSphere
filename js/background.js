@@ -31,7 +31,7 @@ const texture = new THREE.TextureLoader().load( "assets/temp_sketch_texture.png"
 // texture.wrapS = THREE.RepeatWrapping;
 // texture.wrapT = THREE.RepeatWrapping;
 // texture.repeat.set( 4, 4 );
-const pGeometry = new THREE.PlaneGeometry( 5, 5);
+const pGeometry = new THREE.PlaneGeometry( 5,5);
 // const pMaterial = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
 const pMaterial = new THREE.MeshLambertMaterial({ map : texture,     transparent: true,
 });
@@ -44,6 +44,7 @@ scene.add(gridHelper);
 scene.fog = new THREE.Fog(0xffffff, 0.1, 60);
 //gridHelper.position.y = -2.5;
 plane.position.y = 2.5;
+plane.position.z = 5;
 //gridHelper.rotation.x = -0.25;
 //plane.rotation.x = -0.25;
 camera.position.y = 2;
@@ -62,6 +63,7 @@ function animate() {
   requestAnimationFrame(animate);
   camera.lookAt(pt);
   gridHelper.rotation.y += 0.00075;
+
   plane.rotation.y += 0.00075;
   renderer.render(scene, camera);
 };
