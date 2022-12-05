@@ -58,6 +58,7 @@ camera.position.y = 2;
 camera.position.z = -10;
 plane0.position.z =planePos[0];
 plane1.position.x =planePos[1];
+//plane1.rotation.y =30;
 
 camera.aspect = cW / cH;
 window.addEventListener('resize', onWindowResize);
@@ -76,9 +77,9 @@ function animate() {
   plane0.translateZ(-planePos[0]);
   plane0.rotation.y += 0.00075;
   plane0.translateZ(planePos[0]);
-  plane1.translateZ(-planePos[1]);
+  plane1.translateX(-planePos[1]);
   plane1.rotation.y += 0.00075;
-  plane1.translateZ(planePos[1]);
+  plane1.translateX(planePos[1]);
   renderer.render(scene, camera);
 };
 animate();
