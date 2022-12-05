@@ -27,7 +27,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   // gCol = 0xFF9E9E;
   gCol = 0xcccccc;
 }
-const texture = new THREE.TextureLoader().load( "../assets/temp_sketch_texture.png" );
+const texture = new THREE.TextureLoader().load( "assets/temp_sketch_texture.png" );
 // texture.wrapS = THREE.RepeatWrapping;
 // texture.wrapT = THREE.RepeatWrapping;
 // texture.repeat.set( 4, 4 );
