@@ -49,6 +49,7 @@ plane.position.y = 1.5;
 //plane.rotation.x = -0.25;
 camera.position.y = 2;
 camera.position.z = -10;
+plane.position.z =10;
 camera.aspect = cW / cH;
 window.addEventListener('resize', onWindowResize);
 
@@ -63,8 +64,9 @@ function animate() {
   requestAnimationFrame(animate);
   camera.lookAt(pt);
   gridHelper.rotation.y += 0.00075;
-
+  plane.translateZ(-10);
   plane.rotation.y += 0.00075;
+  plane.translateZ(10);
   renderer.render(scene, camera);
 };
 animate();
