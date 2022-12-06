@@ -2,8 +2,8 @@ let isMob = new Boolean(false);
 let size = 5;
 let divisions = 100;
 let gCol = new THREE.Color(0xff0000);
-const planePos = [5,7,16,18,22];
-const planeSize = 3;
+const planePos = [10,7,16,18,22];
+const planeSize =5;
 const cW = window.innerWidth;
 const cH = window.innerWidth;
 const scene = new THREE.Scene();
@@ -15,7 +15,7 @@ const controls = new THREE.OrbitControls(camera, renderer.domElement)
 const pt = new THREE.Vector3(0, -1, -1);
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-const light = new THREE.AmbientLight( 0xffffff );
+const light = new THREE.AmbientLight();
 scene.add( light );
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   size = cW / 5;
@@ -29,7 +29,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   gCol = 0xcccccc;
 }
 const texture0 = new THREE.TextureLoader().load( "assets/temp_sketch_texture.png" );
-const texture1 = new THREE.TextureLoader().load( "assets/flower.png" );
+const texture1 = new THREE.TextureLoader().load( "assets/ng_content_strat.png" );
 
 // texture.wrapS = THREE.RepeatWrapping;
 // texture.wrapT = THREE.RepeatWrapping;
@@ -54,11 +54,10 @@ scene.fog = new THREE.Fog(0xffffff, 0.1, 60);
 plane0.position.y = planeSize/2;
 plane1.position.y = planeSize/2;
 
-camera.position.y = 2;
-camera.position.z = -10;
-plane0.position.z =planePos[0];
-plane1.position.x =planePos[1];
-//plane1.rotation.y =30;
+camera.position.y = 10;
+camera.position.z = -20;
+ plane0.position.z =planePos[0];
+ plane1.position.x =planePos[1];
 
 camera.aspect = cW / cH;
 window.addEventListener('resize', onWindowResize);
@@ -74,12 +73,14 @@ function animate() {
   requestAnimationFrame(animate);
   camera.lookAt(pt);
   gridHelper.rotation.y += 0.00075;
-  plane0.translateZ(-planePos[0]);
+   plane0.translateZ(-planePos[0]);
   plane0.rotation.y += 0.00075;
+  
   plane0.translateZ(planePos[0]);
-  plane1.translateX(-planePos[1]);
-  plane1.rotation.y += 0.00075;
-  plane1.translateX(planePos[1]);
+  plane0.rotation.y += 0.00075;
+   plane1.translateX(-planePos[1]);
+   plane1.rotation.y += 0.00075;
+   plane1.translateX(planePos[1]);
   renderer.render(scene, camera);
 };
 animate();
